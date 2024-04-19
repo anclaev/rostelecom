@@ -1,19 +1,33 @@
 'use client'
+import { useCallback } from 'react'
+import Link from 'next/link'
+
+import { openMenu } from '@context/modals'
 import { useLang } from '@hooks/useLang'
 
+import Menu from '@components/modules/Header/Menu'
 import Logo from '@components/elements/Logo'
-import Link from 'next/link'
+
+import { addOverflowHiddenFromBody } from '@lib/utils/common'
 
 import './index.css'
 
 const Header = () => {
   const { lang, translations } = useLang()
+
+  const handleOpenMenu = useCallback(() => {
+    addOverflowHiddenFromBody()
+    openMenu()
+  }, [])
+
   return (
     <header className='header'>
       <div className='container header__container'>
-        <button className='btn-reset header__burger'>
+        <button className='btn-reset header__burger' onClick={handleOpenMenu}>
           {translations[lang].header.menu_btn}
         </button>
+
+        <Menu />
 
         <div className='header__logo'>
           <Logo />
