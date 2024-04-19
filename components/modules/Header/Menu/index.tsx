@@ -8,6 +8,7 @@ import { removeOverflowHiddenFromBody } from '@lib/utils/common'
 import { $menuIsOpen, closeMenu } from '@context/modals'
 import { setLang } from '@context/lang'
 
+import Logo from '@components/elements/Logo'
 import { useLang } from '@hooks/useLang'
 
 import { LANGS } from '@constants/lang'
@@ -44,6 +45,9 @@ const Menu = () => {
   return (
     <nav className={`nav-menu ${menuIsOpen ? 'open' : 'close'}`}>
       <div className='container nav-menu__container'>
+        <div className={`nav-menu__logo ${menuIsOpen ? 'open' : ''}`}>
+          <Logo />
+        </div>
         <img
           src='/img/menu-bg.png'
           alt='Menu background'
@@ -66,6 +70,13 @@ const Menu = () => {
           >
             EN
           </button>
+          <ul
+            className={`list-reset nav-menu__list ${menuIsOpen ? 'open' : ''}`}
+          >
+            <li className='nav-menu__list__item'></li>
+            <li className='nav-menu__list__item'></li>
+            <li className='nav-menu__list__item'></li>
+          </ul>
         </div>
         <h1>menu</h1>
       </div>
