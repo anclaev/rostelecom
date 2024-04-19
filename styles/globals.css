@@ -28,6 +28,12 @@ body {
   color: var(--color-content);
 }
 
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .overflow-hidden {
   overflow-y: hidden;
   padding-right: 8px;

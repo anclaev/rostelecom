@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import { Layout } from '@components/layouts/Layout'
+import Layout from '@components/layouts/Layout'
 
 import '@styles/normalize.css'
 import '@styles/globals.css'

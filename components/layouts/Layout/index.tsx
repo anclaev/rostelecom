@@ -1,9 +1,11 @@
-import { Header } from '@components/modules/Header'
+import Header from '@components/modules/Header'
 
-export const Layout = ({ children }: { children: React.ReactNode }) => (
+const Layout = ({ children }: { children: React.ReactNode }) => (
   <>
     <Header />
     {children}
     <div className='' />
   </>
 )
+
+export default Layout
