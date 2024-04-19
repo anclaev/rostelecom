@@ -12,8 +12,8 @@
 }
 
 .nav-menu__container {
+  position: relative !important;
   padding-top: 58px !important;
-  position: relative;
 }
 
 .nav-menu__logo {
