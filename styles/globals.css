@@ -4,7 +4,7 @@ body {
   font-family:
     Rostelecom Basis,
     Helvetica,
-    sans-serif;
+    sans-serif !important;
   font-weight: 400;
   background-color: var(--color-background);
   color: var(--color-content);
@@ -25,6 +25,7 @@ body {
   cursor: pointer;
   background-color: transparent;
   border: none;
+  color: var(--color-content);
 }
 
 .overflow-hidden {
